@@ -24,7 +24,10 @@ class HomePage extends StatelessWidget {
         title: Text("Counter"),
         centerTitle: true,
       ),
-      body: Text("Meu primeiro texto"),
+      body: Text(
+        "Meu primeiro texto",
+        style: TextStyle(color: Colors.white, fontSize: 18),
+      ),
     );
   }
 }
