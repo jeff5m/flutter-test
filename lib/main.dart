@@ -18,16 +18,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        title: Text("Counter"),
-        centerTitle: true,
-      ),
-      body: Text(
-        "Meu primeiro texto",
-        style: TextStyle(color: Colors.white, fontSize: 18),
-      ),
-    );
+        backgroundColor: Colors.deepPurple,
+        appBar: AppBar(
+          backgroundColor: Colors.purple,
+          title: Text("Counter"),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Text(
+            "Meu primeiro texto",
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
+        ));
   }
 }
