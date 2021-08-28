@@ -14,26 +14,37 @@ class AppWidget extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomePageState();
+  }
+}
+
+class HomePageState extends State<HomePage> {
+  int count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.purple,
       appBar: AppBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.purpleAccent,
         title: Text("Counter"),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          "Meu primeiro texto",
+          "Counting: $count",
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.purpleAccent,
         onPressed: () {
-          print("Clicked!");
+          setState(() {
+            ++count;
+          });
         },
         child: Icon(Icons.add),
       ),
