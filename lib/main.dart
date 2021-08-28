@@ -10,11 +10,19 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "My first App",
       home: HomePage(),
+      themeMode: ThemeMode.system,
       theme: ThemeData(
           primaryColor: Colors.purpleAccent,
           scaffoldBackgroundColor: Colors.purple,
           floatingActionButtonTheme: FloatingActionButtonThemeData(
               backgroundColor: Colors.purpleAccent
+          )
+      ),
+      darkTheme: ThemeData(
+          primaryColor: Colors.black54,
+          scaffoldBackgroundColor: Colors.blueGrey,
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+              backgroundColor: Colors.black54
           )
       ),
     );
