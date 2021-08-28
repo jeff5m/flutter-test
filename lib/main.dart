@@ -10,6 +10,13 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "My first App",
       home: HomePage(),
+      theme: ThemeData(
+          primaryColor: Colors.purpleAccent,
+          scaffoldBackgroundColor: Colors.purple,
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+              backgroundColor: Colors.purpleAccent
+          )
+      ),
     );
   }
 }
@@ -27,9 +34,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
       appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
         title: Text("Counter"),
         centerTitle: true,
       ),
@@ -40,7 +45,6 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purpleAccent,
         onPressed: () {
           setState(() {
             ++count;
